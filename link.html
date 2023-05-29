@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>个人博客</title>
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                background-color: #f5f6f7;
+            }
+            .navbar{
+                margin-bottom: 0;
+            }
+
+            .navbar-header > span{
+                display: inline-block;
+                padding: 15px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .album{
+                position: relative;
+            }
+
+            .carousel {
+                position: relative;
+                width: 100%;
+                height: 550px;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .carousel-item {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 550px;
+                opacity: 0;
+                transition: opacity 1s linear;
+                background-repeat: no-repeat;
+            }
+
+            .carousel-item.active {
+                opacity: 1;
+            }
+
+            .carousel-nav {
+                position: absolute;
+                left: 50%;
+                bottom: 10%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 99;
+            }
+
+            .carousel-nav button {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: none;
+                margin: 0 10px;
+                background-color: #fff;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .carousel-nav button.active {
+                width: 20px;
+                background-color: #ffcc33;
+
+            }
+
+            .article{
+                background-color: #ffffff;
+                border-radius: 8px;
+                padding: 20px;
+                margin: 10px 0;
+                height:200px;
+            }
+
+            .main{
+                margin:30px 0;
+            }
+
+            .flex{
+                flex: 1;
+            }
+
+            p.text-ellipsis{
+                margin-bottom: 6px;
+                color:#777;
+            }
+
+            footer{
+                background-color: #1e2022!important;
+                color:#fff;
+                text-align: center;
+                padding:30px 0;
+            }
+
+        </style>
+	</head>
+	<body>
+		<header class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <span>个人博客</span>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#h5-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <ul class="nav navbar-nav navbar-right hidden-xs hidden-sm"> 
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li> 
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li> 
+                </ul> 
+                <nav id="h5-navbar-collapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">博客首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            技术博文 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a href="/listing.html">Java资料</a></li>
+                          <li><a href="/listing.html">PHP资料</a></li>
+                          <li><a href="/listing.html">Web资料</a></li>
+                        </ul>
+                      </li>
+                    <li class=""><a href="/book.html">主修课程</a></li>
+                    <li class=""><a href="/">精美图片</a></li>
+                    <li class=""><a href="/link.html">资源站点</a></li>
+                    <li class=""><a href="/feedback.html">留言反馈</a></li>
+                    <li class=""><a href="/">关于我</a></li>
+                  </ul>
+                </nav>
+              </div>
+        </header>
+
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <h3>推荐网站</h3>
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>名称</th>
+                              <th>网址</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>jQuery插件</td>
+                              <td><a href="https://www.jq22.com/" target="_blank">https://www.jq22.com/</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>jQuery插件</td>
+                                <td><a href="https://www.jq22.com/" target="_blank">https://www.jq22.com/</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>jQuery插件</td>
+                                <td><a href="https://www.jq22.com/" target="_blank">https://www.jq22.com/</a></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>jQuery插件</td>
+                                <td><a href="https://www.jq22.com/" target="_blank">https://www.jq22.com/</a></td>
+                              </tr>
+                          </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2012-2023 xx个人博客</p>
+            <p>京ICP备11008151号-6</p>
+        </footer>
+	</body>
+</html>
